@@ -1,0 +1,11 @@
+
+Fsquid:S1148."#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Æ—Ôã¨-
+[
+squid:S106F"9Replace this use of System.out or System.err by a logger.(°†«æıÿÿÿÿ8•Àğ¨-
+esquid:S001124"FDefine and throw a dedicated exception instead of using a generic one.(ÕÓµ¥8À‚‰å¨-
+[
+squid:S106="9Replace this use of System.out or System.err by a logger.(ü×ÍÛûÿÿÿÿ8è†§å¨-
+[
+squid:S106H"9Replace this use of System.out or System.err by a logger.(ÆÂ¾Ğúÿÿÿÿ8•š£å¨-
+Fsquid:S1148&"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ñ©æ¨-
+gsquid:S2583*"DChange this condition so that it does not always evaluate to "false"(¦†âÿøÿÿÿÿ8Ë¦ƒå¨-

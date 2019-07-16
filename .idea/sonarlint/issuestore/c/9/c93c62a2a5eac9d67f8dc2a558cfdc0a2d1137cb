@@ -1,0 +1,4 @@
+
+‚squid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ì­ŠÜúÿÿÿÿ8øùÎ¢¨-
+“squid:S1319'"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ú¾éıÿÿÿÿ8·”åä¨-
+wsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(é¨€Ä8ƒè¾¡¨-

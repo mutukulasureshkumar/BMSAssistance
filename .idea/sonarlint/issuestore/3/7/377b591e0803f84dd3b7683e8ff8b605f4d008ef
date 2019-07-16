@@ -1,0 +1,6 @@
+
+psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(·õ‡®
+Šsquid:S1319Y"sThe type of the "keywords" object should be an interface such as "List" rather than the implementation "ArrayList".(ïûÚˆ
+‡squid:S1319U"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¸ ¼“
+vsquid:S00116"YRename this field "EndCoversation" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÜ¤‡øÿÿÿÿ
+Gsquid:S2065"0Remove the "transient" modifier from this field.(Íˆ­—
