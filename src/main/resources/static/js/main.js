@@ -41,8 +41,8 @@ function onConnected() {
             connectingElement.classList.add('hidden');
         }
     };
-    xhttp.open("GET", "https://letmeknow.cfapps.io/getChatId", true);
-    //xhttp.open("GET", "http://localhost:9090/getChatId", true);
+    //xhttp.open("GET", "https://tellme.cfapps.io/getChatId", true);
+    xhttp.open("GET", "http://localhost:9090/getChatId", true);
     xhttp.send();
 }
 

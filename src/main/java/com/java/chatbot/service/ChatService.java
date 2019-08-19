@@ -71,11 +71,30 @@ public class ChatService {
 				setMovieDate(chat, movies);
 			}else if(movies.getTheaterName() == null){
 				setMovieTheater(chat, movies);
+			}else if(movies.getMobile() == null){
+				setMobile(chat, movies);
 			}else if(movies.getEmailId() == null){
 				setEmailId(chat, movies);
 			}else{
 				concludeChat(chat, movies);
 			}
+		}
+	}
+
+	private void setMobile(Chat chat, Movies movies) {
+		try{
+			if(chat.getContent().length() == 10){
+				movies.setMobile(chat.getContent());
+				String response = message(Phase.MOBILE, null);
+				repository.set(chat.getChatId(), movies);
+				sendReply(chat, response);
+			}else{
+				String response = "Please enter valid 10 digits mobile number!!";
+				sendReply(chat, response);
+			}
+		}catch (Exception e){
+			String response = "Please enter valid 10 digits mobile number!!";
+			sendReply(chat, response);
 		}
 	}
 
@@ -101,7 +120,6 @@ public class ChatService {
 		}
 		return true;
 	}
-
 	private String message(Phase phase, String input){
 		String message=null;
 		switch (phase){
@@ -115,7 +133,10 @@ public class ChatService {
 				message = "Invalid date selection!! <"+input+">. I'll only accept today or a future date. Please try again.";
 				break;
 			case THEATER:
-				message = "Nice Theater!! I have saved your data. Please give me the one email id to notify you, once book my show opens the window for your movie.";
+				message = "Nice Theater!! I have saved your data. Please enter your 10 digits mobile number to notify.";
+				break;
+			case MOBILE:
+				message = "Please enter your EMAIL to notify";
 				break;
 			case EMAIL_ID:
 				message = "Please type 'YES' to confirm the details are correct.";
@@ -200,6 +221,7 @@ public class ChatService {
 		keywords.add(Phase.MOVIE_NAME+" : "+movies.getMovieName());
 		keywords.add(Phase.DATE+" : "+movies.getDate());
 		keywords.add(Phase.THEATER+" : "+movies.getTheaterName());
+		keywords.add(Phase.MOBILE+" : "+movies.getMobile());
 		keywords.add(Phase.EMAIL_ID+" : "+movies.getEmailId());
 
 		String response = message(Phase.EMAIL_ID, null);
@@ -224,6 +246,6 @@ public class ChatService {
 	}
 
 	private enum Phase{
-		START, MOVIE_NAME, DATE, DATE_ERROR, THEATER, EMAIL_ID, NULL_ERROR, END
+		START, MOVIE_NAME, DATE, DATE_ERROR, THEATER, EMAIL_ID, MOBILE, NULL_ERROR, END
 	}
 }

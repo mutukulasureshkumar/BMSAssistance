@@ -10,6 +10,7 @@ public class Movies {
     private String theaterName;
     private String theaterURL;
     private boolean eligibleForSearch=false;
+    private String mobile;
 
     public String getMovieName() {
         return movieName;
@@ -86,5 +87,13 @@ public class Movies {
 
     public void setEligibleForSearch(boolean eligibleForSearch) {
         this.eligibleForSearch = eligibleForSearch;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 }

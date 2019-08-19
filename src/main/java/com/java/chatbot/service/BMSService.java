@@ -25,6 +25,9 @@ public class BMSService {
     @Autowired
     private EmailService emailService;
 
+   @Autowired
+    private SMSService smsService;
+
     private void readByTherater(){
         BufferedReader br = null;
         try {
@@ -57,6 +60,7 @@ public class BMSService {
         String line;
         while ((line = br.readLine()) != null) {
             if(line.toUpperCase().contains(movies.getMovieName().toUpperCase())){
+                smsService.sendSms(movies);
                 emailService.sendMail(movies);
                 System.out.println(movies.getMovieName()+ " Movie Placed in BMS......Email sent to "+movies.getEmailId());
                 return true;

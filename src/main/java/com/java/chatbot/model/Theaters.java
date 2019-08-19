@@ -43,6 +43,9 @@ public class Theaters {
     @Value("${sriramuluMoosapet}")
     private String sriramuluMoosapet;
 
+     @Value("${inoxGSMMall}")
+    private String inoxGSMMall;
+
     public HashMap<String, String> getTheraters(){
         HashMap<String, String> theraters = new HashMap<String, String>();
         theraters.put("PRASADS", prasads);
@@ -57,6 +60,7 @@ public class Theaters {
         theraters.put("BIGCINIMAS_AMEERPET", bigCinemasAmeerpet);
         theraters.put("ASIAN_LAXMIKALA", asianLaxmikala);
         theraters.put("SRIRAMULU_MOOSAPET", sriramuluMoosapet);
+        theraters.put("INOX_GSMMALL", inoxGSMMall);
         return theraters;
     }
 
