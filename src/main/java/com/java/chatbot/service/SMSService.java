@@ -26,7 +26,7 @@ public class SMSService {
 			// Construct data
 			System.out.println("***************************************** From SMS Service");
 			String textMessage = "BMS-ASSIST: "+movies.getMovieName().toUpperCase()+", Bookings opened in "+ movies.getTheaterName().toUpperCase();
-			String apiKey = "apikey=" + "IOVDOPZv6Bg-syLcGwIRJoAJewB2eP7Zh5OYgYDgf8";
+			String apiKey = "apikey=" + "*******************";
 			String message = "&message=" + textMessage;
 			String sender = "&sender=" + "TXTLCL";
 			String numbers = "&numbers=" + movies.getMobile();

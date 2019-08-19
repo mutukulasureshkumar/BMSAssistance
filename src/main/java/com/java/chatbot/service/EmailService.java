@@ -31,7 +31,7 @@ public class EmailService {
 			Email to = new Email(movies.getEmailId());
 			Content content = new Content("text/plain", "Automatic mail, please don't replay");
 			Mail mail = new Mail(from, subject, to, content);
-			SendGrid sg = new SendGrid("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");
+			SendGrid sg = new SendGrid("***************************");
 			Request request = new Request();
 			try {
 				request.setMethod(Method.POST);
